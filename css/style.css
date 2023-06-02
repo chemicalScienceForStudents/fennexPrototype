@@ -1,0 +1,243 @@
+/******************/
+/* CSS VARIABLES */
+/****************/
+
+:root{
+    
+    /***************/
+    /*** COLORS ***/
+    /*************/
+    --blue:#14406c;
+    --dark-blue:#0a1727;
+    --dark-cream:#e2cd66;
+    --light-cream:#edd9b7;
+    
+    /*************/
+    /*** SIZE ***/
+    /***********/
+
+    --navegation-height:50px;
+    --settings-width:400px;
+}
+
+
+/***************/
+/* TAGS STYLE */
+/*************/
+
+body{
+    font-family: 'Manrope', sans-serif;
+    margin: 0;
+    text-align: center;
+}
+
+/**************/
+/***GENERAL***/
+/************/
+
+.non-scroll{
+    overflow: hidden;
+}
+
+.flex-container{
+    align-items: center;
+    display: flex;
+    justify-content: center;
+}
+
+/*************/
+/***HEADER***/
+/***********/
+
+.header-container{
+    background-color: var(--dark-blue);
+    height: var(--navegation-height);
+    justify-content: space-between;
+    position: sticky;
+    top: 0;
+    width: 100%;
+}
+
+.logo-img{
+    height: 25px;
+    padding: 12.5px;
+    width: auto;
+}
+
+.menu-container{
+    background: linear-gradient(180deg, var(--dark-blue), var(--blue));
+    display: flex;
+    flex-direction: column;
+    height: calc(100vh - 50px);
+    left: -300vw;
+    padding-top: 10px;
+    position: fixed;
+    top: 50px;
+    transition-duration: 0.35s;
+    width: 100%;
+    z-index: 3;
+}
+
+.menu-link{
+    color: white;
+    cursor: pointer;
+    font-size: 22px;
+    font-weight: 400;
+    height: fit-content;
+    letter-spacing: 3px;
+    padding: 10px 20px;
+}
+
+.menu-selection{
+    text-decoration: underline;
+    text-decoration-color: var(--dark-cream);
+    text-decoration-thickness: 3px;
+}
+
+.menu-burger-button{
+    align-items: center;
+    background: transparent;
+    border: none;
+    color: white;
+    cursor: pointer;
+    display: flex;
+    font-size: 30px;
+    height: 50px;
+    justify-content: center;
+    width: 50px;
+}
+
+.menu-settings-button{
+    align-items: center;
+    background-color: var(--dark-blue);
+    border-radius: 50px;
+    border: none;
+    bottom: 10px;
+    color: white;
+    cursor: pointer;
+    display: flex;
+    font-size: 30px;
+    height: 50px;
+    justify-content: center;
+    margin: 0;
+    padding: 10px;
+    position: fixed;
+    right:10px;
+    transition-duration: 0.35s;
+    width: 50px;
+    z-index: 2;
+}
+
+/***********/
+/***MAIN***/
+/*********/
+
+.main-container{
+    display: flex;
+    height: calc(100vh - 50px);
+}
+
+/*************/
+/***FOOTER***/
+/***********/
+
+.footer-container{
+    background-color: var(--dark-blue);
+    height: fit-content;
+    padding: 5px 0;
+}
+
+.footer-container p {
+    color: white;
+    font-size: 20px;
+    font-weight: 500;
+    margin: 0;
+}
+
+.social-media{
+    background-color: var(--light-cream);
+    border-radius: 50%;
+    cursor: pointer;
+    height: 30px;
+    margin: 5px;
+    width: 30px;
+}
+
+/**********************/
+/* Responsive design */
+/********************/
+
+/**********************/
+/* Mobile (landscape)*/
+/********************/
+
+/*** Only works for mobiles in landscape with resulution of height : 412 px with width: > 412 px ***/
+
+@media (max-height:412px) and (orientation:landscape){
+    
+    .settings-sub-sub-container{
+        flex-wrap:nowrap;
+    }
+}
+
+
+/******************/
+/* DESKTOP STYLE */
+/****************/
+
+/***********************************/
+/* Desktop and tablet (landscape) */
+/*********************************/
+
+/*********************/
+/* Only break point */
+/*******************/
+/* 
+   --------------------------  Explication -> ipad resolution is 768 x 1024px in vertical postion
+   |                        |                 is considered as a smartphone, but in 1024 x 768px 
+   |                        |                 is considered as a computer, this break point consider
+   |     916 x 412 px       |                 that only exist two design mobile or desktop,the bigger
+   |                        |                 resolution in phone founded was 411 x 812px, so we take
+   |                        |                 the limit values of resolution as following: width:768+1px
+   --------------------------                 and height:411+1px up this are computer down this are a phone
+*/
+
+@media (min-height:412px) and (min-width: 916px) {
+    
+    /*************/
+    /***HEADER***/
+    /***********/
+
+    .menu-burger-button{
+        display: none;
+    }
+
+    .menu-container{
+        align-items: center;
+        background: transparent;
+        flex-direction: row;
+        height: 50px;
+        justify-content: center;
+        padding-top: 0;
+        position: static;
+        width: fit-content;
+    }
+
+    .menu-settings-button{
+        display: none;
+    }
+   
+
+}
+
+
+/**********************/
+/* Mobile (landscape)*/
+/********************/
+
+/*** Only works for mobiles in landscape with resulution of height : 412 px with width: > 412 px ***/
+
+@media (max-height:412px) and (orientation:landscape){
+}
+
+

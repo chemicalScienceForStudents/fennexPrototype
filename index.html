@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+    <head>
+    <!-- Meta information -->
+    <title>Fennex Demo 1.00</title>
+    <meta charset="UTF-8">
+    <meta name="author" content="cssTeam">
+    <meta name="description" content="This is the products for Chemical Science for Students">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#0a1727"/>
+    <link rel="icon" href="./media/icon.png" >
+    <!-- load styles and inmediate resources -->
+    <link type="text/css" rel="stylesheet" href="./css/style.css">   
+    <!-- Preconnet files -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200;300;400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+
+    <body id="body">
+        <main id="app" >
+        
+            <header class="header-container flex-container">
+                <img class="logo-img" src="./media/fennexLogo.svg">
+                <nav id="navigationMenu" class="menu-container">
+                    <a class="menu-link">INICIO</a>
+                    <a class="menu-link menu-selection">DEMO</a>
+                    <a class="menu-link">CSS</a>
+                </nav>
+                <button class="menu-burger-button" @click="showMenu('burger')">
+                    <i class="fa-solid fa-bars"></i>
+                </button>
+            </header>
+            <class="main-container">
+               
+            </main>
+            <footer class="footer-container">
+                <p>Copyright ©2023 CSS</p>
+                <section class="flex-container">
+                    <a class="social-media flex-container"><i class="fa-brands fa-facebook-f"></i></a>
+                    <a class="social-media flex-container"><i class="fa-brands fa-instagram"></i></a>
+                    <a class="social-media flex-container"><i class="fa-brands fa-youtube"></i></a>
+                    <a class="social-media flex-container"><i class="fa-brands fa-tiktok"></i></a>
+                </section>
+            </footer>
+
+        </main>
+
+    </body>
+
+
+    <script src="./js/d3.js" type="text/javascript" defer></script>
+    <script type="text/javascript" src="./js/app.js" defer></script>
+    <script src="./js/fontAsome.min.js" type="text/javascript" defer></script>
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+
+
+
+</html>
