@@ -18,6 +18,14 @@
 
     --navegation-height:50px;
     --settings-width:400px;
+
+    /*******************/
+    /*** Font sizes ***/
+    /*****************/
+
+    /* Title font size */
+    --min-title-size:32px;
+    --max-title-size:52px;
 }
 
 
@@ -128,6 +136,10 @@ body{
     z-index: 2;
 }
 
+.show-menu{
+    left: 0px;
+}   
+
 /***********/
 /***MAIN***/
 /*********/
@@ -163,6 +175,33 @@ body{
     width: 30px;
 }
 
+/********************/
+/* Responsive text */
+/******************/
+
+/* sintax  linear responsive text [min font size + (max font size - min font size) * ((viewport width - min viewport width) / (max viewport width - min viewport width))] */
+
+.fluid-font-title{
+    font-size: var(--min-title-size)
+}
+
+/* Scren with a width equal or bigger than 320px  */
+@media screen and (min-width: 320px) {
+    
+    .fluid-font-title{
+        font-size: calc(var(--min-title-size) + 20 * ((100vw - 320px) / 1600)) ;
+    }
+}
+
+
+/* Scren with a width equal or bigger than 1920px  */
+@media screen and (min-width: 1920px) {
+
+    .fluid-font-title{
+        font-size: var(--max-title-size);
+    }
+}
+
 /**********************/
 /* Responsive design */
 /********************/
@@ -179,7 +218,6 @@ body{
         flex-wrap:nowrap;
     }
 }
-
 
 /******************/
 /* DESKTOP STYLE */
@@ -226,18 +264,5 @@ body{
     .menu-settings-button{
         display: none;
     }
-   
 
 }
-
-
-/**********************/
-/* Mobile (landscape)*/
-/********************/
-
-/*** Only works for mobiles in landscape with resulution of height : 412 px with width: > 412 px ***/
-
-@media (max-height:412px) and (orientation:landscape){
-}
-
-
